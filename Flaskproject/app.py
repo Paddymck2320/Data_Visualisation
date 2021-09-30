@@ -2,7 +2,6 @@ from flask import Flask, render_template, request
 
 import tweepy as tp
 
-
 from twitter_auth import *
 
 auth = tp.OAuthHandler(API_KEY, API_SECRET)
@@ -17,9 +16,16 @@ app = Flask(__name__)
 def homepage():
     return render_template('index.html')
 
+
+@app.route('/chart')
+def chart():
+    return render_template('chart.html')
+
+
 @app.route('/about', methods=['GET'])
 def aboutpage():
     return render_template('about.html')
+
 
 @app.route('/tweets', methods=['POST'])
 def tweetspage():  # put application's code here
@@ -28,11 +34,9 @@ def tweetspage():  # put application's code here
         query = request.form['query']
         tweets = api.search(query)
 
-        return render_template('results.html', query = tweets)
+        return render_template('results.html', query=tweets)
 
     return render_template('404.html')
-
-
 
 
 if __name__ == '__main__':
