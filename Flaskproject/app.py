@@ -103,7 +103,7 @@ def tweetspage():  # put application's code here
 
     if request.method == 'POST':
         query = request.form['query']
-        tweets = api.search(query)
+        tweets = api.search_tweets(query)
 
         return render_template('results.html', query=tweets)
 
