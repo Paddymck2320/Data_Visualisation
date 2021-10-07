@@ -22,6 +22,7 @@ def homepage():
 def aboutpage():
     return render_template('about.html')
 
+
 @app.route('/chart')
 def chart():
     df = pd.read_csv('static/CSV/Book1.csv', header=None)
@@ -94,7 +95,7 @@ def chart():
 
     print(drilldown)
     print(series)
-    return render_template('chart.html', series=series, drilldown = drilldown)
+    return render_template('chart.html', series=series, drilldown=drilldown)
 
 
 @app.route('/tweets', methods=['POST'])
