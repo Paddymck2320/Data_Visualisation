@@ -1,17 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
 {% extends 'partials/layout.html' %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-           <div class="col-sm-12 center">
-               <h1>Home Content</h1>
-    <form action="/tweets" method="POST">
-                    <br><br>
-                    <input type="text">
-                    <br><br>
-                    <button type="submit"></button>
-                </form>
-                 </div>
-        </div>
-    </div>
+    <h1> Our Landing Page</h1>
+    <form method="POST" action="/tweets">
+    <input type="text" name="query">
+    <button type="submit" value="Submit"><</button>
+</form>
 {% endblock %}
+
+
+</body>
+</html>
