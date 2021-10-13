@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
-
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+from textblob import TextBlob
 import tweepy as tp
 import pandas as pd
 import json
@@ -13,15 +14,46 @@ api = tp.API(auth)
 app = Flask(__name__)
 
 
+
+list = []
+
+for tweet in tweets:
+
+    sentiment = TextBlob(tweet.text).sentiment.polarity
+
+    if sentiment > 0.15:
+        sentiment = 'positive'
+    elif sentiment < -.15:
+        sentiment = 'neg'
+    else:
+        sentiment = 'neu'
+
+    list.append((tweet.text, sentiment))
+
+df = pd.DataFrame(list)
+
+df.to_csv("output.csv", sep=",")
+
 @app.route('/', methods=['GET'])
 def homepage():
     return render_template('index.html')
+tweets = api.search(q='brexit')
+
+def tweet_scores(tweets):
+
+    sid = SentimentIntensityAnalyzer()
+    sentiment_dict = sid.polarity_scores(tweets)
+    neutral = []
+    positive = []
+    negative = []
+
+
+
 
 
 @app.route('/about', methods=['GET'])
 def aboutpage():
     return render_template('about.html')
-
 
 @app.route('/chart')
 def chart():
@@ -95,7 +127,7 @@ def chart():
 
     print(drilldown)
     print(series)
-    return render_template('chart.html', series=series, drilldown=drilldown)
+    return render_template('chart.html', series=series, drilldown = drilldown)
 
 
 @app.route('/tweets', methods=['POST'])
@@ -103,7 +135,7 @@ def tweetspage():  # put application's code here
 
     if request.method == 'POST':
         query = request.form['query']
-        tweets = api.search_tweets(query)
+        tweets = api.search(query)
 
         return render_template('results.html', query=tweets)
 
