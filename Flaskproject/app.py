@@ -14,6 +14,7 @@ api = tp.API(auth)
 app = Flask(__name__)
 
 
+tweets = api.search(q='brexit')
 
 list = []
 
@@ -37,18 +38,6 @@ df.to_csv("output.csv", sep=",")
 @app.route('/', methods=['GET'])
 def homepage():
     return render_template('index.html')
-tweets = api.search(q='brexit')
-
-def tweet_scores(tweets):
-
-    sid = SentimentIntensityAnalyzer()
-    sentiment_dict = sid.polarity_scores(tweets)
-    neutral = []
-    positive = []
-    negative = []
-
-
-
 
 
 @app.route('/about', methods=['GET'])

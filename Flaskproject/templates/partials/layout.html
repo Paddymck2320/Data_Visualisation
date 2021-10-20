@@ -12,19 +12,16 @@
     <title>Flask</title>
   </head>
   <body>
-     <div class="jumbotron text-center" style="background-color:#013766 ">
+     <div class="jumbotron text-center" style="background-color:white ">
          <div class="row">
-              <div class="col-sm-2 center">
-                <img src  = "{{ url_for('static', filename='images/boristhumbsup.gif') }}" height="150px">
+              <div class="col-sm-2 left">
+                <img src  = "{{ url_for('static', filename='images/tweets-removebg-preview.png') }}" height="150px">
               </div>
         <div class="col-sm-4 center"><br><br>
-             <h1 style="color:white">Tweet Sentiment Analyzer</h1>
+             <h1 style="color:Black">Tweet Sentiment Analyzer</h1>
         </div>
         <div class="col-sm-4 center">
-             <img src  = "{{ url_for('static', filename='images/borisgif.gif') }}" height="150px">
         </div>
-               <div class="col-sm-2 center">
-              </div>
         </div>
     </div>
      {% include 'partials/navigation.html' %}
