@@ -33,7 +33,7 @@ for tweet in tweets:
 
 df = pd.DataFrame(list)
 
-df.to_csv("output.csv", sep=",")
+df.to_csv("static/CSV/output.csv", sep=",")
 
 @app.route('/', methods=['GET'])
 def homepage():
@@ -46,7 +46,7 @@ def aboutpage():
 
 @app.route('/chart')
 def chart():
-    df = pd.read_csv('static/CSV/Book1.csv', header=None)
+    df = pd.read_csv('static/CSV/output.csv', header=None)
     series = {}
     drilldown = {}
 
@@ -89,8 +89,8 @@ def chart():
             drilldown['series'].append(list_item)
             current_value = id
 
-        data.append([cat, val])
-        value += val
+        data.append([id, val])
+        value += id
 
     list_item = {}
     series_list_item = {}
