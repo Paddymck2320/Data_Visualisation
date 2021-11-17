@@ -1,3 +1,7 @@
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 {% extends 'partials/layout.html' %}
 
 {% block content %}
@@ -24,31 +28,20 @@ Highcharts.chart('container', {
             valueSuffix: '%'
         }
     },
-    plotOptions: {
+ plotOptions: {
         pie: {
             allowPointSelect: true,
             cursor: 'pointer',
             dataLabels: {
-                enabled: false
-            },
-            showInLegend: true
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+            }
         }
     },
     series: [{
-        name: 'Tweets',
+        name: '{{ chart_name }}',
         colorByPoint: true,
-        data: [{
-            name: 'Positive',
-            y: 2403,
-            sliced: true,
-            selected: true
-        }, {
-            name: 'Negative',
-            y: 310
-        }, {
-            name: 'Neutral',
-            y: 1630
-        }]
+        data: {{ data | safe }}
     }]
 });});
       </script>

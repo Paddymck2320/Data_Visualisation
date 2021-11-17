@@ -4,36 +4,70 @@ from textblob import TextBlob
 import tweepy as tp
 import pandas as pd
 import json
+import re
+from matplotlib import pyplot as plt
 from twitter_auth import *
+
+app = Flask(__name__)
 
 auth = tp.OAuthHandler(API_KEY, API_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
 api = tp.API(auth)
 
-app = Flask(__name__)
+def clean_tweet(input):
+    return re.sub('[^A-Za-z0-9 ]+','', input)
+
+def get_clean_tweets(query='brexit'):
+
+    tweets = {}
+
+    vdr = SentimentIntensityAnalyzer()
+
+    tweets_from_api = api.search(q=query)
+
+    id = 0
+
+    for tweet in tweets_from_api:
+        tweets[id] = {
+            'id':id,
+            'username':tweet.user.name,
+            'text': clean_tweet(tweet.text),
+            'sentiment': vdr.polarity_scores(tweet.text)['compound']
+        }
+        id+=1
+
+    df = pd.DataFrame.from_dict(tweets, orient='index')
+
+    df.set_index('id', inplace=True)
+
+    df.to_csv('static/CSV/output.csv')
+
+    return df
+
+def get_polarity(tweets):
+    return (tweets['sentiment']> .25).sum(), (tweets['sentiment']< -.25).sum(), (tweets['sentiment'].between(-.25, .25)).sum()
+
+def display_graph(p, n , neu):
+    labels = ['postitive', 'negative', 'neutral']
+    values = [p,n,neu]
+
+    plt.title('Sentiment Analysis')
+
+    plt.pie(values, labels=labels, autopct='%1.1f%%')
+
+    plt.show()
 
 
-tweets = api.search(q='brexit')
+if __name__ == '__main__':
+    df = pd.read_csv('static/CSV/output.csv')
 
-list = []
+    df.set_index('id', inplace=True)
 
-for tweet in tweets:
+    postitive, negative, neutral = get_polarity(df)
 
-    sentiment = TextBlob(tweet.text).sentiment.polarity
+    display_graph(postitive, negative, neutral)
 
-    if sentiment > 0.15:
-        sentiment = 'positive'
-    elif sentiment < -.15:
-        sentiment = 'neg'
-    else:
-        sentiment = 'neu'
-
-    list.append((tweet.text, sentiment))
-
-df = pd.DataFrame(list)
-
-df.to_csv("static/CSV/output.csv", sep=",")
 
 @app.route('/', methods=['GET'])
 def homepage():
@@ -45,79 +79,26 @@ def aboutpage():
     return render_template('about.html')
 
 @app.route('/chart')
-def chart():
-    df = pd.read_csv('static/CSV/output.csv', header=None)
-    series = {}
-    drilldown = {}
+def display_graph():  # put application's code here
+    title = 'Data Vis Project 2021'
+    desc = 'A chart to viualise sentiment'
 
-    series['name'] = 'Tweets'
-    series['colorByPoint'] = 'true'
+    df = get_clean_tweets('brexit')
 
-    drilldown['series'] = []
-    current_value = None
-    data = []
-    series_data = []
-    value = 0
+    pos, neg, nue = get_polarity(df)
 
-    for row in df.iterrows():
+    labels = ['positive', 'negative', 'neutral']
+    values = [pos, neg, nue]
 
-        ent = row[1]
+    data = zip(labels, values)
 
-        id = ent[0]
-        cat = ent[1]
-        val = ent[2]
+    list = []
 
-        if current_value == None:
-            current_value = id
+    for label, value in data:
+        list.append({'name':label, 'y': value})
 
-        if id != current_value:
-            list_item = {}
-            series_list_item = {}
 
-            list_item['name'] = current_value
-            list_item['id'] = current_value
-            list_item['data'] = data
-
-            series_list_item['name'] = current_value
-            series_list_item['y'] = value
-            series_list_item['drilldown'] = current_value
-
-            series_data.append(series_list_item)
-
-            data = []
-            value = 0
-            drilldown['series'].append(list_item)
-            current_value = id
-
-        data.append([id, val])
-        value += id
-
-    list_item = {}
-    series_list_item = {}
-
-    list_item['name'] = current_value
-    list_item['id'] = current_value
-    list_item['data'] = data
-
-    series_list_item["name"] = current_value
-    series_list_item["y"] = value
-    series_list_item["drilldown"] = current_value
-
-    series_data.append(series_list_item)
-
-    data = []
-    value = 0
-    drilldown['series'].append(list_item)
-
-    series['data'] = series_data
-
-    series = json.dumps(series)
-    drilldown = json.dumps(drilldown)
-
-    print(drilldown)
-    print(series)
-    return render_template('chart.html', series=series, drilldown = drilldown)
-
+    return render_template('chart.html', title=title,description_text=desc, chart_name='Pie', data=list)
 
 @app.route('/tweets', methods=['POST'])
 def tweetspage():  # put application's code here
@@ -129,6 +110,7 @@ def tweetspage():  # put application's code here
         return render_template('results.html', query=tweets)
 
     return render_template('404.html')
+
 
 
 if __name__ == '__main__':
