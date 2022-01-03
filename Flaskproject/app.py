@@ -23,11 +23,7 @@ def display_graph():  # put application's code here
     desc = 'A chart to viualise sentiment'
 
     df = get_clean_tweets()
-    pos=[]
-    neg=[]
-    neu=[]
-    print(df)
-    pos, neg, nue = get_polarity(df, pos, neg, neu)
+    pos, neg, nue = get_polarity(df)
 
     labels = ['positive', 'negative', 'neutral']
     values = [pos, neg, nue]

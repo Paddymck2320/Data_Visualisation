@@ -2,28 +2,13 @@ import pandas as pd
 from matplotlib import pyplot as plt
 
 
-def get_polarity(tweets, neg, neu, pos):
-    print(tweets[0])
-    for tweet in tweets[0]:
-        if tweet['sentiment'] > .25:
-            pos.append(tweet)
-        elif  tweet['sentiment'] < .25:
-            neg.append(tweet)
-        else:
-            neu.append(tweet)
+def get_polarity(tweets):
+    return (tweets['sentiment'] > .25).sum(), (tweets['sentiment'] < -.25).sum(), (
+        tweets['sentiment'].between(-.25, .25)).sum()
 
-    return pos, neg, neu
-
-def get_polarity1(tweets, neg, neu, pos):
-    for tweet in tweets:
-        if tweet.sentiment > .25:
-            pos.append(tweet)
-        elif  tweet.sentiment < .25:
-            neg.append(tweet)
-        else:
-            neu.append(tweet)
-
-    return pos, neg, neu
+def get_polarity1(tweets1):
+    return (tweets1['sentiment'] > .25).sum(), (tweets1['sentiment'] < -.25).sum(), (
+        tweets1['sentiment'].between(-.25, .25)).sum()
 
 def display_graph(p, n, neu):
     labels = ['postitive', 'negative', 'neutral']

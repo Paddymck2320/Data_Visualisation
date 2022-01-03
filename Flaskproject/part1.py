@@ -3,7 +3,6 @@ import tweepy as tp
 import re
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import pandas as pd
-from csv import writer
 
 
 def clean_tweet(input):
@@ -34,20 +33,13 @@ def get_clean_tweets():
         }
         id += 1
 
-    return tweets
+    df = pd.DataFrame.from_dict(tweets, orient='index')
 
-def append_list_as_row(file_name, tweet, vdr):
-    # Open file in append mode
-    with open(file_name, 'a+', newline='') as write_obj:
-        # Create a writer object from csv module
-        csv_writer = writer(write_obj)
-        # Add contents of list as last row in the csv file
-        csv_writer.writerow(tweet)
-    row_contents = [id, tweet.user.name, tweet.user.location, clean_tweet(tweet.text),
-                    vdr.polarity_scores(tweet.text)['compound']]
-    append_list_as_row('output.csv', row_contents)
+    df.set_index('id', inplace=True)
 
+    df.to_csv('output.csv', mode='a', header=False)
 
+    return df
 
 def get_clean_tweets1():
     auth1 = tp.OAuthHandler(API_KEY, API_SECRET)
@@ -73,18 +65,13 @@ def get_clean_tweets1():
         }
         id += 1
 
+    df1 = pd.DataFrame.from_dict(tweets1, orient='index')
 
-def append_list_as_row(file_name, tweet, vdr):
-    # Open file in append mode
-    with open(file_name, 'a+', newline='') as write_obj:
-        # Create a writer object from csv module
-        csv_writer = writer(write_obj)
-        # Add contents of list as last row in the csv file
-        csv_writer.writerow(tweet)
-    row_contents = [id, tweet.user.name, tweet.user.location, clean_tweet(tweet.text),
-                    vdr.polarity_scores(tweet.text)['compound']]
-    append_list_as_row('output1.csv', row_contents)
+    df1.set_index('id', inplace=True)
 
+    df1.to_csv('output1.csv', mode='a', header=False)
+
+    return df1
 
 if __name__ == '__main__':
     get_clean_tweets()
