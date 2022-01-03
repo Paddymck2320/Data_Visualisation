@@ -1,16 +1,101 @@
-id,username,text,sentiment
-0,Sudhanshu Bedekar ⭐⭐,RT ChrisGagg TT we come from a game against Brighton where VAR misses handballs amp yet here they are checking Kovacics goalIm sorry b,-0.296
-1,Sam,RT LaurensJulien Thomas Tuchel while VAR was checking Chelseas first goal Lets go home he says  Imagine if they had ruled it out,0.8061
-2,Tuchelsophy,RT ChrisGagg TT we come from a game against Brighton where VAR misses handballs amp yet here they are checking Kovacics goalIm sorry b,-0.296
-3,Josh Cole-Wilkins,atm1927 EFL its also a shit matchday being robbed blind VAR would of saved us vs chelsea the year we went down,-0.5423
-4,Tinsel Tubbs,RT ScottyHayter The fact that VAR spent three times as long trying to justify a reason to disallow our first goal than they did the Mane,0.0
-5,.,RT Bengals BIG TIME STOP,-0.4466
-6,Iki🧢,RT CampoCFC If you were in any doubt as to how bent VAR is then watching them spend more time trying to give a 25 yard volley offside th,-0.3612
-7,Richmond Osei Danquah,RT TweetChelseaUK Thomas Tuchels reaction to VAR reviewing Chelseas first goal lets go homeMy manager  httpstcoe67ZRGUsTa,0.4404
-8,Stefan,RT ChrisGagg TT we come from a game against Brighton where VAR misses handballs amp yet here they are checking Kovacics goalIm sorry b,-0.296
-9,Collosoy,RT CampoCFC If you were in any doubt as to how bent VAR is then watching them spend more time trying to give a 25 yard volley offside th,-0.3612
-10,Finley,RT ChrisGagg TT we come from a game against Brighton where VAR misses handballs amp yet here they are checking Kovacics goalIm sorry b,-0.296
-11,Sam🇰🇪,RT LaurensJulien Thomas Tuchel while VAR was checking Chelseas first goal Lets go home he says  Imagine if they had ruled it out,0.8061
-12,🌚,RT Evertxn If Im actually being fair to Arsenal even excluding this game I dont think theres another club that gets screwed over by,-0.2263
-13,Media Jonny,RT ChrisGagg TT we come from a game against Brighton where VAR misses handballs amp yet here they are checking Kovacics goalIm sorry b,-0.296
-14,Kwabena,RT TweetChelseaUK Thomas Tuchels reaction to VAR reviewing Chelseas first goal lets go homeMy manager  httpstcoe67ZRGUsTa,0.4404
+id,username,location,text,sentiment
+0,Balungile,"Acornhoeck, South Africa. MP",RT TweetChelseaUK Thomas Tuchels reaction to VAR reviewing Chelseas first goal lets go homeMy manager  httpstcoe67ZRGUsTa,0.4404
+1,Jaypeee,Hemel Hempstead,RT Codeye67 Breaking news VAR have just ruled out the Mateo Kovacic goal from yesterdayAfter noticing a foul in the build up play by,0.34
+2,Paquito,"Galicia, España",RT FootyHumour A regular person in their house has this footage but VAR doesnt  httpstco8I6Y9vpKQT,0.5927
+3,Block205Row43,North West ,GarySutheran Gazlfc08 They wont finish within 10 points of us and if we cant beat Brentford and Palace without httpstcovktk9OEj56,0.0
+4,Matt,"London, England",RT LaurensJulien Thomas Tuchel while VAR was checking Chelseas first goal Lets go home he says  Imagine if they had ruled it out,0.8061
+5,Fitzer,,konaldo7 hamz1892 TerroristThiago PassLikeThiago SeanDOlfc You literally got knocked out because of VAR,0.0
+6,Dion Johnson,,RT CampoCFC If you were in any doubt as to how bent VAR is then watching them spend more time trying to give a 25 yard volley offside th,-0.3612
+7,Martin Edwards,Sheffield,This guy is brilliant Definitely worth a follow if youre interested in VAR and the decisionmaking process httpstco5u5HhhVira,0.8779
+8,#42,,RT LaurensJulien Thomas Tuchel while VAR was checking Chelseas first goal Lets go home he says  Imagine if they had ruled it out,0.8061
+9,Kech🎅🏼🎄,Sverige,RT HemmenKees Just imaging the VAR screen on the broadcast showing Banger instead of Goal or Goal Disallowed,0.0
+10,Yanto,Heart of the Hive,Charliehanss0n ClockEndVal Yeah A petition calling for the investigation of Mike Riley VAR and this running it httpstcoWgQ2pidWL5,0.3595
+11,Jennifer,Gods own county,DannyRLUFC Go down the VAR route Clear and obvious,0.3818
+12,Todd,,RT Codeye67 Breaking news VAR have just ruled out the Mateo Kovacic goal from yesterdayAfter noticing a foul in the build up play by,0.34
+13,TweeterBoi™️,"Lagos, Nigeria",RT LaurensJulien Thomas Tuchel while VAR was checking Chelseas first goal Lets go home he says  Imagine if they had ruled it out,0.8061
+14,lee connor,Liverpool,grassrootsrefJa ahmedjush alexthechook SkySportsPL Var starting to make sense for the arsenal game,0.0
+15,XIII,,There is no way they can say every call was the right call even then they decide when and when not to go to VAR eve httpstcoJ4zhw9wGYf,-0.296
+16,Ali 🖤 STACHE VAR,Everywhere,RT lcrzbrg Perfect  watch any time in the week each week one episode  for example episode 2 week Im working very late every day so I w,0.3182
+17,Daniel,"Johannesburg, South Africa",talkSPORT More reasons why Gabby shouldnt be a ref or operate VAR,0.0
+18,Ronoh Cornelius (Kipchumba),Kenya,robhoopz VAR is overrated,0.0
+19,.,"Cincinnati, OH",RT DanHoard Best question I ever askedRuleTheJungle,0.6369
+20,danny,Maidstone,Chrisstirland03 ZachMcElroy1 Billypearce123 Carra23 A there are literal var replays in highlightsB just beca httpstcoYysUVy983Q,0.0
+21,Stuart Cripps 💙,,Codeye67 Good job ethereal was no var back thengames would take avery long time to finish,0.5574
+22,Iron Thompson,"Bicester, England",JackLebeau66 In all honesty Id rather watch darts than football these days except West Ham obviously because I httpstcoLS6RQFyik8,0.4939
+23,.,"Cincinnati, OH",RT AllBengals Im gonna break every record they have httpstcoaHPw0Ssm5S,0.0
+24,SIHLE CHELSEA _FC_ChampionsOfEurope,,RT LaurensJulien Thomas Tuchel while VAR was checking Chelseas first goal Lets go home he says  Imagine if they had ruled it out,0.8061
+25,deano,"Burntwood, England",Less than 2 hours till kick offYour predictions after VAR and the other muppet MD have had a play are,0.34
+26,Nkosi👑🇿🇲🇿🇦🇿🇼,Lusaka,RT CFCDaily If you show someone why VAR is a problem Show them Kovacics goal They actually checked that for a while to see if it shoul,-0.4019
+27,Spurs44life,"East Borneo, Indonesia",ESPNUK Refree and var excluded ey,-0.34
+28,Emeka_P,Nigeria,RT jakeheasman Just clocked that officials have cost us 6 points in our last 3 games Not from contentious decisions but clear cut red c,0.2946
+29,Dale Johnson,N 51°25' 0'' / W 0°6' 0'',editorsaif Yes its silly saying its not controversial and then explaining why and the VAR process,0.5255
+30,Jono Marcelino,"Los Angeles, CA",In programming where some people use dummy datavar names such as foo or bar I use the terms swag cash money or cool,0.3182
+31,Chapions of Europe 🏆🏆💙,,RT ESPNFC Lets go homeTuchels reaction to VAR checking Kovacics goal against Liverpool via LaurensJulien httpstcosZYZC,0.0
+32,Hamzah,freepalestine,RT BenziaJr konaldo7 hamz1892 TerroristThiago PassLikeThiago SeanDOlfc VAR was in 1819 UCL btw,0.0
+33,FPL_Lost,"Stockholm, Sverige",Always read Dales VAR thread Always httpstcoixyixA5K4p,0.0
+34,Shikhar Bhargava,Singapore,RT TweetChelseaUK Thomas Tuchels reaction to VAR reviewing Chelseas first goal lets go homeMy manager  httpstcoe67ZRGUsTa,0.4404
+35,Dave moody,,RT hayesmichaelp AFTVMedia And Stevie Wonder will be on VAR duty,0.0
+36,Benzia,Behind you,konaldo7 hamz1892 TerroristThiago PassLikeThiago SeanDOlfc VAR was in 1819 UCL btw,0.0
+37,Daniel ➰,,CarltonPalmer talkSPORT People are saying that he wasnt booked for the spot scuffing but for dissent does it ma httpstcoaKp44jaT0g,0.0
+38,.,"Cincinnati, OH",RT MoEgger Knew this was coming Didnt think it would come from here,0.0
+39,Jackskee ⛷,"High Wycombe, England",RT HarryShotta Is it time to scrap VAR,0.0
+40,Braga,"East Providence, RI",savage4cartoons ESPNFC Cant blame City for poor officiating happens to every team too not just arsenal VAR is httpstcoIMw6FKZNPT,-0.6705
+41,Wikimedia Tech SAL,The Internet,marosteguicumin1001 dbctl commit dcall Repooling after maintenance db1149 diff saved to httpstcoL7G543op5K,0.6124
+42,Gary Ellis,Northern Ireland,elchecf LaLiga realmadrid Disgraceful that goal was ruled out by VAR robbed of three vital points,0.296
+43,Dan💕,"Ikorodu, Lagos ",RT gooner1947 The act of simulation appears to the first offence Anything after is immaterial Free kick to Arsenal and yellow card t,0.2732
+44,James,Republic of Korea,Jerry is on OFCMCFC has been a cracker No VAR in the HeroISL makes for great drama like a bygone time Superb httpstcoQR8Vnh8z6u,0.6597
+45,OLSC Chicago,"Chicago, USA",DaleJohnsonESPN this isnt even a comment on this weeks activity  all your notes make sense and i dont think the httpstcoTy6x0k75Sd,0.0
+46,『Sir』 『Learns_Elot』,Follows you,RT Arsenalman2011 Its reported that Paul Tierney was removed from VAR duties for the CFC vs LFC game I believe its coz Klopp was vocal,0.0
+47,Manuel 😏,,RT TweetChelseaUK Thomas Tuchels reaction to VAR reviewing Chelseas first goal lets go homeMy manager  httpstcoe67ZRGUsTa,0.4404
+48,🐾,Rwanda🇷🇼,VARikaze Do your parents know youre this violent ,-0.7323
+49,Ethan,,eveelizabethxx 11 we play better but var gives united a pen,0.7469
+CFP,"St James' Park, Newcastle ",RT StuartTLatimer Cristiano should have been sent off according to the best independent refereeing authority Keith HACKETTREF yet VAR,0.6705
+𝕮𝖔𝖒𝖕𝖙𝖔𝖓🥷•,+233,RT LaurensJulien Thomas Tuchel while VAR was checking Chelseas first goal Lets go home he says  Imagine if they had ruled it out,0.8061
+CARTA,• East London •,databasedean frankmajor Coufals  a penalty though Even the officials afterwards come out and said it shouldnt httpstcoGeAaCAxGqT,-0.4588
+Craig Belcher,"Driffield, England",RT Codeye67 Breaking news VAR have just ruled out the Mateo Kovacic goal from yesterdayAfter noticing a foul in the build up play by,0.34
+lee connor,Liverpool,grassrootsrefJa ahmedjush alexthechook SkySportsPL Why cant var get these angles and slow it down like they no httpstcorQA6GQ2Dfa,0.3612
+Alan Giles,"Berkshire, England",RT LaurensJulien Thomas Tuchel while VAR was checking Chelseas first goal Lets go home he says  Imagine if they had ruled it out,0.8061
+Tom 🇹🇻 🇰🇮 🇸🇨 🇬🇲 🇧🇿,Northumbria,RT DaleJohnsonESPN Its your Monday VAR thread and its not really as controversial as the noise may have suggested Looking at ,0.2018
+👺,Bedfordshire,SkySportsPL The whole point of VAR is to see the challenge from multiple angles so why would they go with the fals httpstcoh8IBhq9y91,0.0772
+Sebastian omulando,Pipuline,RT LaurensJulien Thomas Tuchel while VAR was checking Chelseas first goal Lets go home he says  Imagine if they had ruled it out,0.8061
+Ollie Agate,"Crowborough, England",RT Codeye67 Breaking news VAR have just ruled out the Mateo Kovacic goal from yesterdayAfter noticing a foul in the build up play by,0.34
+TweeterBoi™️,"Lagos, Nigeria",RT TweetChelseaUK VAR is such a joke and its so annoying I cant believe how much it angered me yesterday after our first goal Kov,-0.6799
+NUFC Fans Food Bank,"North East, England",RT StuartTLatimer Cristiano should have been sent off according to the best independent refereeing authority Keith HACKETTREF yet VAR,0.6705
+Phillip,,LemonLlama tocfcws VAR is not fare and I think that position they have to involve those referees who are not wor httpstco1e7r7gQeZG,0.0
+Tien Nguyen ⭐️⭐️,"Ho Chi Minh, Vietnam",RT jakeheasman Just clocked that officials have cost us 6 points in our last 3 games Not from contentious decisions but clear cut red c,0.2946
+tommy⚒,"Romford, London",RT SimonThomson67 JackLebeau66 More concerned about player diving bad refereeing and VAR than a few kids with boards,-0.4939
+Lenny,"Ackworth, ",MickyPKerr Robot VAR Sound like a Russian tv program ,0.4199
+Stuart Latimer Esq.,"Newcastle Upon Tyne, England",Cristiano should have been sent off according to the best independent refereeing authority Keith HACKETTREF yet httpstcoCwtdKelmFf,0.6705
+Chris Boxx,"London, England",RT ChrisGagg TT we come from a game against Brighton where VAR misses handballs amp yet here they are checking Kovacics goalIm sorry b,-0.296
+DUCK MAGAZINE,Stuck in 1993,How the hell was that tackle not even a card Its probably a yellow and VAR possible red in the league above,-0.6808
+Peter N,Holloway boy living in Wales,RT gooner1947 Yes Ref Atwell was totally useless but we mustnt forget VAR ref Jarrad Gillets role in it all httpstcoyUll5wxVqW,0.2029
+SarkodieNeBaObidi,Boston MA 🇬🇭🇺🇸,RT LaurensJulien Thomas Tuchel while VAR was checking Chelseas first goal Lets go home he says  Imagine if they had ruled it out,0.8061
+Bamee,Nigeria,RT TweetChelseaUK Thomas Tuchels reaction to VAR reviewing Chelseas first goal lets go homeMy manager  httpstcoe67ZRGUsTa,0.4404
+Shadrack Okello©🇰🇪,"Mombasa, Kenya",RT TweetChelseaUK Thomas Tuchels reaction to VAR reviewing Chelseas first goal lets go homeMy manager  httpstcoe67ZRGUsTa,0.4404
+John ◣ ◢,The Black Country,premierleague With Mike Dean as Ref amp Andre Marriner on VARUtd are guaranteed at least one penalty amp I would be httpstcottqqEfSDg0,-0.4588
+Mopol Burna,Favour,RT ESPNFC Lets go homeTuchels reaction to VAR checking Kovacics goal against Liverpool via LaurensJulien httpstcosZYZC,0.0
+Sarp Tepeler,Melikgazi/KAYSERİ,gamze5008 1filinta1 Ahahaha  Ne var yahu Something  sho doesnt know ite ,0.8271
+Aiden Blakemore,"Wolverhampton, England",RT GaryPoynton Delirium which was quickly ruined by a needless VAR check,-0.4767
+Honest Pendulum Fan 🔴🟡🇦🇱🇽🇰,"Penchester Penited, at Pendu's",VARdrid As per goat,0.0
+Cruise 🤴🏽,Love❤️,RT youngoche VAR in Nigerian Premier League Im dead httpstcox8Fx17pkJ7,-0.8885
+James Stevens,,leeconnor4 ahmedjush alexthechook SkySportsPL From a journalist who knows as much as there is to know about VAR httpstcocLjBm6TpvA,0.0
+Alexander,,RT LaurensJulien Thomas Tuchel while VAR was checking Chelseas first goal Lets go home he says  Imagine if they had ruled it out,0.8061
+Tom Chambers,,davingush Almostsarp ESPNFC LaurensJulien I know it happens mate but only when someone is clearly obstructing httpstcozu4P5mZmzF,0.5499
+Henning,Germany,RT RadicalRegiden Custom syntax highlighting amp autocompletion for language amp var editor in our new engine Stuff like colors can even,0.3612
+BraLoco,"Kumasi, Ghana",RT LaurensJulien Thomas Tuchel while VAR was checking Chelseas first goal Lets go home he says  Imagine if they had ruled it out,0.8061
+🤞🏾 O D D A N G E L💫🚀,,RT OhhShxtDatsVar Sequioa07 same Var no breaks still grindin it out  BEENRICH blessed,0.5538
+Eyituoyo,"London, Lagos, Manchester",RT LaurensJulien Thomas Tuchel while VAR was checking Chelseas first goal Lets go home he says  Imagine if they had ruled it out,0.8061
+Johnny Midnight,,talkSPORT VAR is killing football Get rid Utter shiteRefs are too scared to make a decision and VAR makes wrong decisions,-0.886
+Ayush Acharya,Nepal,RT LaurensJulien Thomas Tuchel while VAR was checking Chelseas first goal Lets go home he says  Imagine if they had ruled it out,0.8061
+I AM A MAVIN,"Anambra, Nigeria",RT osilama10 gnrmikolo FrankKhalidUK 433cfc Werner is NOT a deadwood He has suffered from VAR more than any other player anywhere ,-0.4939
+Balungile,"Acornhoeck, South Africa. MP",RT TweetChelseaUK Thomas Tuchels reaction to VAR reviewing Chelseas first goal lets go homeMy manager  httpstcoe67ZRGUsTa,0.4404
+Jaypeee,Hemel Hempstead,RT Codeye67 Breaking news VAR have just ruled out the Mateo Kovacic goal from yesterdayAfter noticing a foul in the build up play by,0.34
+Paquito,"Galicia, España",RT FootyHumour A regular person in their house has this footage but VAR doesnt  httpstco8I6Y9vpKQT,0.5927
+Block205Row43,North West ,GarySutheran Gazlfc08 They wont finish within 10 points of us and if we cant beat Brentford and Palace without httpstcovktk9OEj56,0.0
+Matt,"London, England",RT LaurensJulien Thomas Tuchel while VAR was checking Chelseas first goal Lets go home he says  Imagine if they had ruled it out,0.8061
+Fitzer,,konaldo7 hamz1892 TerroristThiago PassLikeThiago SeanDOlfc You literally got knocked out because of VAR,0.0
+Dion Johnson,,RT CampoCFC If you were in any doubt as to how bent VAR is then watching them spend more time trying to give a 25 yard volley offside th,-0.3612
+Martin Edwards,Sheffield,This guy is brilliant Definitely worth a follow if youre interested in VAR and the decisionmaking process httpstco5u5HhhVira,0.8779
+#42,,RT LaurensJulien Thomas Tuchel while VAR was checking Chelseas first goal Lets go home he says  Imagine if they had ruled it out,0.8061
+Kech🎅🏼🎄,Sverige,RT HemmenKees Just imaging the VAR screen on the broadcast showing Banger instead of Goal or Goal Disallowed,0.0
+Yanto,Heart of the Hive,Charliehanss0n ClockEndVal Yeah A petition calling for the investigation of Mike Riley VAR and this running it httpstcoWgQ2pidWL5,0.3595
