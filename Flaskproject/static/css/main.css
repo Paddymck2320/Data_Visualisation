@@ -1,0 +1,18 @@
+.main {
+width:70%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: auto;
+}
+.charts {
+min-width:500px;
+padding:0;
+margin:0;
+}
+.search{
+    text-align: center;
+}
+.highcharts-button, .highcharts-legend, .highcharts-container > svg > text {
+    display: none;
+}

@@ -5,15 +5,18 @@
     <title>Title</title>
 </head>
 <body>
-
+ <link rel="stylesheet" type="text/css" href="static/css/main.css"/>
 {% extends 'partials/layout.html' %}
 
 {% block content %}
-    <h1> Our Landing Page</h1>
-    <form method="POST" action="/tweets">
-    <input type="text" name="query">
-    <button type="submit" value="Submit">Search</button>
+    <div class="search">
+    <h1> Search for a Tweet</h1>
+    <form action = "http://localhost:5000/chart" method = "post">
+                    <p>Enter a search query:</p>
+    <input type = "text" name = "query_one" />
+<p><input type = "submit" value = "Search!" /></p>
 </form>
+    </div>
 {% endblock %}
 
 

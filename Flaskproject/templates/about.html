@@ -1,17 +1,23 @@
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/drilldown.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 {% extends 'partials/layout.html' %}
 
 {% block content %}
-    <div id = "container" style = "width: 550px; height: 400px; margin: 0 auto"></div>
+    <link rel="stylesheet" type="text/css" href="static/css/main.css"/>
+    <div class="main">
+        <div class="charts">
+            <div id = "container"></div>
+        </div>
+    <div class="charts">
+            <div id = "container-location" ></div>
+    </div>
+    <div class="charts">
+            <div id = "container1" ></div>
+    </div>
+    <div class="charts">
+            <div id = "container-location2"></div>
+    </div>
+    </div>
       <script language = "JavaScript">
-         $(document).ready(function() {
-
-        // Build the chart
-Highcharts.chart('container', {
+         Highcharts.chart('container', {
     chart: {
         plotBackgroundColor: null,
         plotBorderWidth: null,
@@ -19,7 +25,7 @@ Highcharts.chart('container', {
         type: 'pie'
     },
     title: {
-        text: 'Percentage of positive, negative and neutral Tweets'
+        text: 'Percentage of positive, negative and neutral Tweets For VAR'
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -42,28 +48,224 @@ Highcharts.chart('container', {
     series: [{
         name: '{{ chart_name }}',
         colorByPoint: true,
-        data: {{ data | safe }}
+        data: {{ pi2 | safe }}
     }],
     drilldown: {
         series: [
             {
                 name: "Positive",
                 id: "Positive",
-                data:{{ data | safe }}
+                data:{{ pi2 | safe }}
             },
             {
                 name: "Negative",
                 id: "Negative",
-                data: {{ data | safe }}
+                data: {{ pi2 | safe }}
             },
             {
                 name: "Neutral",
                 id: "Neutral",
-                data: {{ data | safe }}
+                data: {{ pi2 | safe }}
             }
         ]
     }
-});});
+});
+Highcharts.chart('container-location', {
+    chart: {
+        type: 'packedbubble',
+        height: '100%'
+    },
+    title: {
+        text: 'Var Tweet Locations'
+    },
+    tooltip: {
+        useHTML: true,
+        pointFormat: '<b>{point.name}:</b> {point.value}m CO<sub>2</sub>'
+    },
+    plotOptions: {
+        packedbubble: {
+            minSize: '30%',
+            maxSize: '120%',
+            zMin: 0,
+            zMax: 1000,
+            layoutAlgorithm: {
+                splitSeries: false,
+                gravitationalConstant: 0.02
+            },
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}',
+                filter: {
+                    property: 'y',
+                    operator: '>',
+                    value: 250
+                },
+                style: {
+                    color: 'black',
+                    textOutline: 'none',
+                    fontWeight: 'normal'
+                }
+            }
+        }
+    },
+    series: [{
+        name:'chart_name2',
+        data:{{ pb1 | safe }}
+    }]
+});
+
+        // Build the chart
+Highcharts.chart('container1', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Percentage of positive, negative and neutral Tweets For Vaccine'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    accessibility: {
+        point: {
+            valueSuffix: '%'
+        }
+    },
+ plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+            }
+        }
+    },
+    series: [{
+        name: '{{ chart_name1 }}',
+        colorByPoint: true,
+        data: {{ pi4 | safe }}
+    }],
+    drilldown: {
+        series: [
+            {
+                name: "Positive",
+                id: "Positive",
+                data:{{ pi4 | safe }}
+            },
+            {
+                name: "Negative",
+                id: "Negative",
+                data: {{ pi4 | safe }}
+            },
+            {
+                name: "Neutral",
+                id: "Neutral",
+                data: {{ pi4 | safe }}
+            }
+        ]
+    }
+});
+Highcharts.chart('container-location2', {
+    chart: {
+        type: 'packedbubble',
+        height: '100%'
+    },
+    title: {
+        text: 'Var Tweet Locations'
+    },
+    tooltip: {
+        useHTML: true,
+        pointFormat: '<b>{point.name}:</b> {point.value}m CO<sub>2</sub>'
+    },
+    plotOptions: {
+        packedbubble: {
+            minSize: '30%',
+            maxSize: '120%',
+            zMin: 0,
+            zMax: 1000,
+            layoutAlgorithm: {
+                splitSeries: false,
+                gravitationalConstant: 0.02
+            },
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}',
+                filter: {
+                    property: 'y',
+                    operator: '>',
+                    value: 250
+                },
+                style: {
+                    color: 'black',
+                    textOutline: 'none',
+                    fontWeight: 'normal'
+                }
+            }
+        }
+    },
+    series: [{
+        name:'chart_name2',
+        data:{{ pb2 | safe }}
+    }]
+});
+
+        // Build the chart
+Highcharts.chart('container2', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Percentage of positive, negative and neutral Tweets For Vaccine'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    accessibility: {
+        point: {
+            valueSuffix: '%'
+        }
+    },
+ plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+            }
+        }
+    },
+    series: [{
+        name: '{{ chart_name1 }}',
+        colorByPoint: true,
+        data: {{ pi4 | safe }}
+    }],
+    drilldown: {
+        series: [
+            {
+                name: "Positive",
+                id: "Positive",
+                data:{{ pi4 | safe }}
+            },
+            {
+                name: "Negative",
+                id: "Negative",
+                data: {{ pi4 | safe }}
+            },
+            {
+                name: "Neutral",
+                id: "Neutral",
+                data: {{ pi4 | safe }}
+            }
+        ]
+    }
+});
       </script>
 
 {% endblock %}

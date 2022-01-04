@@ -1,12 +1,9 @@
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/drilldown.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 {% extends 'partials/layout.html' %}
 
+ <link rel="stylesheet" type="text/css" href="static/css/main.css"/>
 {% block content %}
     <div id = "container" style = "width: 550px; height: 400px; margin: 0 auto"></div>
+    <div id = "container-location" style = "width: 550px; height: 400px; margin: 0 auto"></div>
     <div id = "container1" style = "width: 550px; height: 400px; margin: 0 auto"></div>
       <script language = "JavaScript">
 
@@ -64,59 +61,48 @@ Highcharts.chart('container', {
         ]
     }
 });
-        // Build the chart
-Highcharts.chart('container1', {
+Highcharts.chart('container-location', {
     chart: {
-        plotBackgroundColor: null,
-        plotBorderWidth: null,
-        plotShadow: false,
-        type: 'pie'
+        type: 'packedbubble',
+        height: '100%'
     },
     title: {
-        text: 'Percentage of positive, negative and neutral Tweets'
+        text:'Tweet Locations'
     },
     tooltip: {
-        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        useHTML: true,
+        pointFormat: '<b>{point.name}:</b> {point.value}m CO<sub>2</sub>'
     },
-    accessibility: {
-        point: {
-            valueSuffix: '%'
-        }
-    },
- plotOptions: {
-        pie: {
-            allowPointSelect: true,
-            cursor: 'pointer',
+    plotOptions: {
+        packedbubble: {
+            minSize: '30%',
+            maxSize: '120%',
+            zMin: 0,
+            zMax: 1000,
+            layoutAlgorithm: {
+                splitSeries: false,
+                gravitationalConstant: 0.02
+            },
             dataLabels: {
                 enabled: true,
-                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                format: '{point.name}',
+                filter: {
+                    property: 'y',
+                    operator: '>',
+                    value: 250
+                },
+                style: {
+                    color: 'black',
+                    textOutline: 'none',
+                    fontWeight: 'normal'
+                }
             }
         }
     },
     series: [{
-        name: '{{ chart_name1 }}',
-        colorByPoint: true,
-        data: {{ data1 | safe }}
-    }],
-    drilldown: {
-        series: [
-            {
-                name: "Positive",
-                id: "Positive",
-                data:{{ data1 | safe }}
-            },
-            {
-                name: "Negative",
-                id: "Negative",
-                data: {{ data1 | safe }}
-            },
-            {
-                name: "Neutral",
-                id: "Neutral",
-                data: {{ data1 | safe }}
-            }
-        ]
-    }
+        name:'chart_name2',
+        data:{{ data2 | safe }}
+    }]
 });
       </script>
 
