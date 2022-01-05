@@ -5,6 +5,7 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import pandas as pd
 
 
+
 def clean_tweet(input):
     return re.sub('[^A-Za-z0-9 ]+', '', input)
 
@@ -16,6 +17,7 @@ def get_clean_tweets(query):
     api = tp.API(auth)
 
     tweets = {}
+
 
     vdr = SentimentIntensityAnalyzer()
 
